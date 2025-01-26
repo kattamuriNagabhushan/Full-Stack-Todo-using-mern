@@ -11,7 +11,11 @@ const SECRET_KEY = process.env.SECRET_KEY || 'your_secret_key';
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors(
+    { origin: ["http://localhost:5173"], 
+    credentials: true 
+
+    }));
 
 // Database connection
 mongoose.connect('mongodb+srv://bhushann795:naga795@cluster0.b9xex.mongodb.net/').then(() => console.log('MongoDB connected')).catch(err => console.error(err));
