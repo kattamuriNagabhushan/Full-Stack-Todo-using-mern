@@ -79,6 +79,9 @@ app.get('/home', (req, res) => {
     });
 });
 
+app.get("/" , (req , res) =>{
+    res.json("hello");
+})
 // Routes for CRUD Operations
 const verifyUser = async (req , res , next) => {
     try {
@@ -100,6 +103,7 @@ const verifyUser = async (req , res , next) => {
         
     }
 }
+
 // 1. Create a new ToDo
 app.post('/todos',verifyUser ,  async (req, res) => {
 
