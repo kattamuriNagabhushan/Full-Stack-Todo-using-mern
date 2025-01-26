@@ -18,7 +18,7 @@ app.use(cors(
     }));
 
 // Database connection
-mongoose.connect('mongodb+srv://bhushann795:naga795@cluster0.b9xex.mongodb.net/').then(() => console.log('MongoDB connected')).catch(err => console.error(err));
+mongoose.connect('mongodb+srv://bhushann795:naga795@cluster0.b9xex.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0').then(() => console.log('MongoDB connected')).catch(err => console.error(err));
 
 // User Schema
 const userSchema = new mongoose.Schema({
